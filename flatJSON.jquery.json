@@ -1,0 +1,28 @@
+{
+    "name": "jValid",
+    "version": "1.0.7",
+    "title": "jValid",
+    "description": "A jQuery Plugin to make valid inputs on form fields and HTML elements",
+    "author": {
+        "name": "Dennis Heránadez Vargas",
+        "email": "djhv92@hotmail.com",
+        "url": "http://djhvscf.github.io/Blog"
+    },
+    "licenses": [
+        {
+            "type": "MIT License",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.7"
+    },
+    "keywords": ["jvalid.jquery"],
+    "homepage": "https://github.com/djhvscf/jValid",
+    "demo": "http://djhvscf.github.io/Blog/experiments/valid.html",
+    "bugs": {
+        "url": "https://github.com/djhvscf/jValid/issues"
+    },
+    "docs": "https://github.com/djhvscf/jValid",
+    "download": "https://github.com/djhvscf/jValid/releases"
+}
