@@ -4,80 +4,16 @@
 <meta charset="UTF-8" />
 <title>jValid</title>
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-<script src="src/jValid.js" type="text/javascript"></script>
-<script type="text/javascript">
-
-<!--
-$(document).ready(function() {
- //$('#text_field').jValid();
- $('#text_field').jValid({regex:'0-0000-0000', onComplete: function(){console.log("completed")}});
- //$('#text_field').jValid({regex:'[A-Z0-9]', behaviorRegExp: true});
-});
-function getCleanValue()
-{
-	$(cleaned).val($('#text_field').cleanValue());
-	//$('#text_field').unjValid();
-	
-};
--->
+<script src="src/flatJSON.js" type="text/javascript"></script>
+<script type="text/javascript">		
+		$(document).ready(function() {
+			$.flatJSON({url:'https://api.github.com/users/djhvscf/events?callback=JSON_CALLBACK', flat:true});
+		});
 </script>
 </head>
 <body>
-<style>
-body
-{
-	font-family: arial, helvetica, freesans, sans-serif;
-	font-size: 100%;
-	color: #333;
-	background-color: #ddd;
-}
 
-h1
-{
-	font-size: 1.5em;
-	font-weight: normal;
-	margin: 0;
-}
-
-.out
-{
-	width: 400px;
-	height: 50px;
-	margin: 20px auto;
-	border: 2px solid #fff;
-	background-color:#777644;
-}
-
-.out1
-{
-	width: 400px;
-	height: 50px;
-	margin: 20px auto;
-	border: 2px solid #fff;
-	background-color:#FF0000;
-}
-
-.out div
-{
-	float: left;
-	width: 4px;
-	height: 50px;
-	margin: 0;
-}
-
-.out1 div
-{
-	float: left;
-	width: 4px;
-	height: 50px;
-	margin: 0;
-}
-
-</style>
-
-<input type="text" id="text_field">
-<input type="button" value="Get clean value!" onclick="getCleanValue();">
-<input type="text" id="cleaned" autocomplete="off">
+<textarea id="textarea1" style="margin: 0px; width: 318px; height: 111px;"></textarea>
 
 </body>
 </html>
