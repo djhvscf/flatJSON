@@ -116,7 +116,7 @@
 				});
 				
 			} else if (options.data !== {}) {
-				if(optins.flat) {
+				if(options.flat) {
 					return sd.flatHelper(options.data);
 				} else if(options.unFlat) {
 					//return sd.unflat(options.data);
