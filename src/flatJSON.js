@@ -38,14 +38,9 @@
     $.flatJSON = function (options) {
 		
 		var defaults = {
-			url: '',
 			data: {},
 			flat: false,
-			unFlat: false, 
-			success: function(obj) { console.log(obj.data); console.log(sd.flatHelper(obj.data)) },
-			method: 'GET',
-			dataType: 'JSONP',
-			crossDomain: true
+			unFlat: false,
 		}, options = $.extend(defaults, options);
 		
 		var sd = {
@@ -106,24 +101,24 @@
 		};
 		
 		var init = function () {
-			if(options.url !== '') {
-				$.ajax({
-					url: options.url,
-					crossDomain: options.crossDomain,
-					dataType: options.dataType,
-					type: options.method,
-					success: options.success,
-				});
-				
-			} else if (options.data !== {}) {
-				if(options.flat) {
-					return sd.flatHelper(options.data);
-				} else if(options.unFlat) {
-					//return sd.unflat(options.data);
+			var arrayToReturn = []
+			if (options.data !== {}) {
+				if($.isArray(options.data)) {
+					if(options.flat) {
+						arrayToReturn = sd.flatHelper(options.data);
+					} else if(options.unFlat) {
+						arrayToReturn = sd.unflat(options.data);
+					}
+				} else {
+					$.error("You must pass an array of objects");
 				}
-			}			
+			} else {
+				$.error("You must pass a valid data");
+			}
+			
+			return arrayToReturn;
 		};
 		
-		init();
+		return init();
     };
 })(jQuery);

@@ -7,7 +7,9 @@
 <script src="src/flatJSON.js" type="text/javascript"></script>
 <script type="text/javascript">		
 		$(document).ready(function() {
-			$.flatJSON({url:'https://api.github.com/users/djhvscf/events?callback=JSON_CALLBACK', flat:true});
+			var objTest = [{test1: {extra:'1'}, test2: {test3: '3'}, 'test4': '4', test5: {test6:{test7:'7', test8:'8'}, test9:'9'}}];
+			console.log(objTest);
+			console.log($.flatJSON({data:objTest , flat:true}));
 		});
 </script>
 </head>
