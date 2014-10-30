@@ -38,13 +38,14 @@
     $.flatJSON = function (options) {
 		
 		var defaults = {
+			//Data to falt or unflat
 			data: {},
-			flat: false,
-			unFlat: false,
+			//Pass true when We want a flat JSON object, pass false if We want an unflat JSON object
+			flat: true
 		}, options = $.extend(defaults, options);
 		
 		var sd = {
-			flat: function(data) {
+			flat: function(element) {
 				var result = {};
 				function recurse (cur, prop) {
 					if (Object(cur) !== cur) {
@@ -67,7 +68,7 @@
 						}
 					}
 				}
-				recurse(data, "");
+				recurse(element, "");
 				return result;
 			},
 
@@ -91,9 +92,9 @@
 				return result[""];
 			},
 			
-			flatHelper: function (data) {
+			flatHelper: function () {
 				var flatArray = [];
-				$.each(data, function(i, element) {
+				$.each(options.data, function(i, element) {
 					flatArray.push(sd.flat(element));
 				});
 				return flatArray;
@@ -101,12 +102,12 @@
 		};
 		
 		var init = function () {
-			var arrayToReturn = []
+			var arrayToReturn = [];
 			if (options.data !== {}) {
-				if($.isArray(options.data)) {
-					if(options.flat) {
-						arrayToReturn = sd.flatHelper(options.data);
-					} else if(options.unFlat) {
+				if ($.isArray(options.data)) {
+					if (options.flat) {
+						arrayToReturn = sd.flatHelper();
+					} else {
 						arrayToReturn = sd.unflat(options.data);
 					}
 				} else {
@@ -114,8 +115,7 @@
 				}
 			} else {
 				$.error("You must pass a valid data");
-			}
-			
+			}			
 			return arrayToReturn;
 		};
 		

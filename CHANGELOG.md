@@ -1,5 +1,11 @@
 ## ChangeLog
 
+### 1.1.0
+
+* Added comments to code
+* Deleted options not used
+* options.flat: true
+
 ### 1.0.1
 
 * Added "throws error"

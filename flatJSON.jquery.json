@@ -1,8 +1,8 @@
 {
-    "name": "jValid",
-    "version": "1.0.7",
-    "title": "jValid",
-    "description": "A jQuery Plugin to make valid inputs on form fields and HTML elements",
+    "name": "flatJSON",
+    "version": "1.1.0",
+    "title": "flatJSON",
+    "description": "This plugin creates a Flat JSON. You can pass the object to convert to flat JSON object",
     "author": {
         "name": "Dennis Heránadez Vargas",
         "email": "djhv92@hotmail.com",
@@ -17,12 +17,12 @@
     "dependencies": {
         "jquery": ">=1.7"
     },
-    "keywords": ["jvalid.jquery"],
-    "homepage": "https://github.com/djhvscf/jValid",
-    "demo": "http://djhvscf.github.io/Blog/experiments/valid.html",
+    "keywords": ["flatJSON.jquery"],
+    "homepage": "https://github.com/djhvscf/flatJSON",
+    "demo": "https://github.com/djhvscf/flatJSON",
     "bugs": {
-        "url": "https://github.com/djhvscf/jValid/issues"
+        "url": "https://github.com/djhvscf/flatJSON/issues"
     },
-    "docs": "https://github.com/djhvscf/jValid",
-    "download": "https://github.com/djhvscf/jValid/releases"
+    "docs": "https://github.com/djhvscf/flatJSON",
+    "download": "https://github.com/djhvscf/flatJSON/releases"
 }

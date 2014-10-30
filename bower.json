@@ -1,11 +1,11 @@
 {
   "name": "flatJSON",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/djhvscf/flatJSON",
   "authors": [
     "djhvscf <djhv92@hotmail.com>"
   ],
-  "description": "This plugin creates a Flat JSON. You can pass the URL or object to convert to JSON",
+  "description": "This plugin creates a Flat JSON. You can pass the object to convert to flat JSON object",
   "main": [
       "src/flatJSON.js"
   ],
