@@ -19,10 +19,10 @@
     },
     "keywords": ["flatJSON.jquery"],
     "homepage": "https://github.com/djhvscf/flatJSON",
-    "demo": "https://github.com/djhvscf/flatJSON",
+    "demo": "http://djhvscf.github.io/Blog/experiments/2014/10/flatjson.html",
     "bugs": {
         "url": "https://github.com/djhvscf/flatJSON/issues"
     },
-    "docs": "https://github.com/djhvscf/flatJSON",
+    "docs": "http://djhvscf.github.io/Blog/experiments/2014/10/flatjson.html",
     "download": "https://github.com/djhvscf/flatJSON/releases"
 }
