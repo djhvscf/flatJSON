@@ -105,11 +105,7 @@
 			var arrayToReturn = [];
 			if (options.data !== {}) {
 				if ($.isArray(options.data)) {
-					if (options.flat) {
-						arrayToReturn = sd.flatHelper();
-					} else {
-						arrayToReturn = sd.unflat(options.data);
-					}
+					arrayToReturn = options.flat ? sd.flatHelper() : sd.unflat(options.data);
 				} else {
 					$.error("You must pass an array of objects");
 				}
