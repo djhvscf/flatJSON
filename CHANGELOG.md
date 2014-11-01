@@ -5,6 +5,7 @@
 * Added comments to code
 * Deleted options not used
 * options.flat: true
+* Delete unnecessary if/else 
 
 ### 1.0.1
 
