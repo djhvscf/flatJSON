@@ -1,6 +1,6 @@
  /**
  * flatJSON.js
- * @version: v1.1.0
+ * @version: v1.2.0
  * @author: Dennis Hernández
  * @webSite: http://djhvscf.github.io/Blog
  *
@@ -33,7 +33,7 @@
  */
  
 
-(function (factory) {
+;(function (factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['jquery'], factory);
