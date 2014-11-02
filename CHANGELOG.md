@@ -1,5 +1,9 @@
 ## ChangeLog
 
+### 1.2.0
+
+* Add AMD compatible
+
 ### 1.1.0
 
 * Added comments to code
