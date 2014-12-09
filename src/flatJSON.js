@@ -61,7 +61,7 @@
 				function recurse (cur, prop) {
 					if (Object(cur) !== cur) {
 						result[prop] = cur;
-					} else if (Array.isArray(cur)) {
+					} else if ($.isArray(cur)) {
 						for(var i = 0, l = cur.length; i < l; i++) {
 							recurse(cur[i], prop ? prop+"."+i : ""+i);
 							if (l == 0) {
