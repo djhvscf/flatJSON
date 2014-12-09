@@ -1,6 +1,6 @@
  /**
  * flatJSON.js
- * @version: v1.2.0
+ * @version: v1.3.0
  * @author: Dennis Hernández
  * @webSite: http://djhvscf.github.io/Blog
  *
@@ -113,12 +113,15 @@
 		};
 		
 		var init = function () {
-			var arrayToReturn = [];
+			var arrayToReturn = [],
+				arrayHelper = [];
 			if (options.data !== {}) {
 				if ($.isArray(options.data)) {
 					arrayToReturn = options.flat ? sd.flatHelper() : sd.unflat(options.data);
 				} else {
-					$.error("You must pass an array of objects");
+					arrayHelper.push(options.data);
+					options.data = arrayHelper;
+					arrayToReturn = options.flat ? sd.flatHelper() : sd.unflat(options.data);
 				}
 			} else {
 				$.error("You must pass a valid data");

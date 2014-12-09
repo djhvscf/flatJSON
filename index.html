@@ -7,8 +7,7 @@
 <script src="src/flatJSON.js" type="text/javascript"></script>
 <script type="text/javascript">		
 		$(document).ready(function() {
-			var objTest = [{test1: {extra:'1'}, test2: {test3: '3'}, 'test4': '4', test5: {test6:{test7:'7', test8:'8'}, test9:'9'}}];
-			console.log(objTest);
+			var objTest = {test1: {extra:'1'}, test2: {test3: '3'}, 'test4': '4', test5: {test6:{test7:'7', test8:'8'}, test9:'9'}};
 			console.log($.flatJSON({data:objTest , flat:true}));
 			document.getElementById("textarea1").value = "objTest: " + JSON.stringify(objTest, undefined, 2);
 		});
