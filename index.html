@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>flatJSON</title>
-<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-<script src="src/flatJSON.js" type="text/javascript"></script>
-<script type="text/javascript">		
-		$(document).ready(function() {
-			var objTest = {test1: {extra:'1'}, test2: {test3: '3'}, 'test4': '4', test5: {test6:{test7:'7', test8:'8'}, test9:'9'}};
-			console.log(objTest);
-			console.log($.flatJSON({data:objTest , flat:true}));
-			document.getElementById("textarea1").value = "objTest: " + JSON.stringify(objTest, undefined, 2);
-		});
-</script>
-</head>
-<body>
-
-<textarea id="textarea1" style="margin: 0px; width: 318px; height: 111px;"></textarea>
-</body>
+<html>
+    <head>    
+        <title>flatJSON Demos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">       
+    </head>
+    <body>
+    	<div class="container">
+			<h1>flatJSON Demos</h1>
+			<div class="form-group">
+				<label for="textarea1">Result</label>
+				<textarea name="textarea1" id="textarea1" cols=10 rows=3 style="height:356px; resize: none;" class="form-control">
+				</textarea>
+			</div>
+        </div>
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="src/flatJSON.js"></script>
+		<script>
+			$(document).ready(function() {
+				var objTest = {test1: {extra:'1'}, test2: {test3: '3'}, 'test4': '4', test5: {test6:{test7:'7', test8:'8'}, test9:'9'}};
+				console.log(objTest);
+				console.log($.flatJSON({data:objTest , flat:true}));
+				document.getElementById("textarea1").value = "objTest: " + JSON.stringify(objTest, undefined, 2);
+			});
+        </script>
+    </body>    
 </html>
